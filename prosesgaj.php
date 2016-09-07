@@ -14,7 +14,7 @@ $taspen				= $_POST['taspen'];
 $pph 				= $_POST['pph'];
 $total_pot			= $_POST['topot'];
 
-$query = mysql_query("INSERT INTO gaji (no_slip, nip, tanggal_gaji, tunjangan_anak, tunjangan_pasangan, tunjangan_jabatan, gapok, gaji_kotor, gaji_bersih, taspen, pph, total_pot) VALUES ('$no_slip', '$nip', '$tanggal_gaji', '$tj_anak', '$tj_pang', '$tj_jab', '$gaji_pokok', '$gaji_kotor', '$gaji_bersih', '$taspen', '$pph', '$total_pot')");
+$query = mysql_query("INSERT INTO gaji (no_slip, nip, Tanggal_gaji, tunjangan_anak, tunjangan_pasangan, tunjangan_jabatan, gaji_pokok, gaji_kotor, gaji_bersih, taspen, pph, total_potongan) VALUES ('$no_slip', '$nip', '$tanggal_gaji', '$tj_anak', '$tj_pang', '$tj_jab', '$gaji_pokok', '$gaji_kotor', '$gaji_bersih', '$taspen', '$pph', '$total_pot')");
 if ($query) {
 	header("location:index.php?pesan=1&isi=Berhasil Menambahkan Data Gaji Dengan No slip $no_slip");
 } else {

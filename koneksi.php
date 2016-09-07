@@ -2,6 +2,7 @@
 @mysql_connect("localhost","root","");
 mysql_select_db("db_gajikaryawan");
 error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+
 $nip = $_GET['q'];
 if($nip){
 $query = mysql_query("select nama_karyawan from pegawai where nip=$nip");
